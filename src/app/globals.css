@@ -7,9 +7,9 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background-color: green;
 }
 
-.name {
-  background-color: lightgreen;
+a {
+  color: 	#0096FF;
+  text-decoration: none;
 }
