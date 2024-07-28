@@ -11,6 +11,7 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
   return (
     <html lang="en">
+      <head><title>Charlie Weinberger</title></head>
       <body>{children}</body>
     </html>
   );
