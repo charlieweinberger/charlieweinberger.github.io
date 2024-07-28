@@ -1,13 +1,9 @@
-import Header from '../components/header';
-import Home from '../components/home';
-import About from '../components/about';
-
 export default function App() {
   return (
-    <div>
-      <Header />
-      <Home />
-      <About />
+    <div id="home" className="home">
+      <div className="name">
+        Charlie Weinberger
+      </div>
     </div>
   );
 }
