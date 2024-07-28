@@ -7,9 +7,10 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  font-family: Times;
 }
 
 a {
-  color: 	#0096FF;
+  color: #0096FF;
   text-decoration: none;
 }
