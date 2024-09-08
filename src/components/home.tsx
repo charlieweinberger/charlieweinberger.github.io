@@ -1,4 +1,4 @@
-export default function App() {
+export default function Home() {
   return (
     <div id="home" className="home">
       <div className="name">

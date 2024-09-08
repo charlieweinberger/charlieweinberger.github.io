@@ -1,4 +1,4 @@
-export default function App() {
+export default function Header() {
   return (
     <div className="header">
       <ul>
