@@ -15,10 +15,10 @@ export default function App() {
         Interested in full-stack web development and artificial intelligence applications
       </div>
       <div className="experience">
-        Skills: Python, C/C++, Rust, Java, JavaScript, TypeScript, HTML/CSS, Node.js, Express.js, React, Next.js, Firebase, PostgreSQL, AWS, OpenAI API, LangChain, Pinecone
+        Skills: Python, C++, Java, JavaScript, TypeScript, HTML/CSS, Node.js, React, Next.js, Tailwind CSS, React Native, Expo, Firebase, Supabase, PostgreSQL, Groq, LangChain
       </div>
       <div className="hobbies">
-        Hobbies: soccer, rock climbing, astronomy, linguistics, geography, politics
+        Hobbies: soccer, rock climbing, running, astronomy, linguistics, geography, politics
       </div>
       <div className="links">
         {getLink("GitHub", "https://github.com/charlieweinberger/")},&nbsp;
