@@ -1,9 +1,6 @@
-body {
-  background: black;
-  color: white;
-  text-align: center;
-  margin: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Header */
 
@@ -29,31 +26,4 @@ body {
 
 .header li a:hover {
   background-color: #111;
-}
-
-.floatRight {
-  float: right;
-}
-
-/* Home */
-
-.home, .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-}
-
-.home {
-  background-color: green;
-}
-
-.name {
-  background-color: lightgreen;
-}
-
-/* About */
-
-.about {
-  background-color: pink;
 }
