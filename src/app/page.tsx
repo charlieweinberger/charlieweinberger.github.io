@@ -1,5 +1,6 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
+import SVGWave from '../components/SVGWave';
 
 import About from '../components/sections/about';
 import Experience from '../components/sections/experience';
@@ -20,11 +21,13 @@ export default function App() {
 
       */}
 
-      <Header />
+      {/* <Header /> */}
+      <SVGWave position={"top"} />
       <About />
-      {/* <Experience />
-      <Projects />
-      <Footer /> */}
+      <SVGWave position={"bottom"} />
+      {/* <Experience /> */}
+      {/* <Projects /> */}
+      {/* <Footer /> */}
    
     </div>
   );

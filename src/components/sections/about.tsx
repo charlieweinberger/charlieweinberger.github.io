@@ -76,13 +76,13 @@ function profileLink(text: string, link: string) {
 function picture() {
   return (
     <Image 
-      src="/christian.png"
+      src="/bonfire.png"
       width={0}
       height={0}
       sizes="1"
-      alt="Picture of Christian"
+      alt="Picture of Charlie Weinberger"
       style={{
-        height: "auto",
+        height: "500px",
         width: "auto",
         borderRadius: "50%",
         objectFit: "cover",
