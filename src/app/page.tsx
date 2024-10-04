@@ -1,30 +1,34 @@
-function getLink(name: string, link: string) {
-  return <a className={name} href={link} target="_blank">{name}</a>
-}
+import Header from '../components/header';
+import Footer from '../components/footer';
+import SVGWave from '../components/SVGWave';
+
+import About from '../components/sections/about';
+import Experience from '../components/sections/experience';
+import Projects from '../components/sections/projects';
 
 export default function App() {
   return (
-    <div id="home" className="home">
-      <div className="name">
-        Charlie Weinberger
-      </div>
-      <div className="college">
-        Sophomore @ University of California, Irvine
-      </div>
-      <div className="role">
-        Interested in full-stack web development and artificial intelligence applications
-      </div>
-      <div className="experience">
-        Skills: Python, C++, Java, JavaScript, TypeScript, HTML/CSS, Node.js, React, Next.js, Tailwind CSS, React Native, Expo, Firebase, Supabase, PostgreSQL, Groq, LangChain
-      </div>
-      <div className="hobbies">
-        Hobbies: soccer, rock climbing, running, astronomy, linguistics, geography, politics
-      </div>
-      <div className="links">
-        {getLink("GitHub", "https://github.com/charlieweinberger/")},&nbsp;
-        {getLink("LinkedIn", "https://linkedin.com/in/charlie-weinberger/")},&nbsp;
-        {getLink("Resume", "/Charlie_Weinberger_Resume.pdf")}
-      </div>
+    <div className="text-neutral-50 text-center m-0">
+      
+      {/*
+      
+      Header: Blue, wavy, layered, sticky
+      Footer: Blue, wavy, layered
+      
+      About: Similar to header, but a different color (either entirely (ex: green) or transition (ex: blue to green)) and a different design (not wavy and layered, but maybe spiky? slanted?)
+      Experience: Same as about, but with another different color & shape
+      Projects: Same as about, but with another different color & shape
+
+      */}
+
+      {/* <Header /> */}
+      <SVGWave position={"top"} />
+      <About />
+      <SVGWave position={"bottom"} />
+      {/* <Experience /> */}
+      {/* <Projects /> */}
+      {/* <Footer /> */}
+   
     </div>
   );
 }
