@@ -4,7 +4,7 @@ export default function Header() {
       
       {/* See youtube playlist: https://www.youtube.com/playlist?list=PLIq-E89khPZ-0UyoJ11BUcyj8-z41zFp5 */}
 
-      <ul className="bg-neutral-700 fixed w-full">
+      <ul className="bg-blue-500 fixed w-full">
         {/* Reverse order, right to left */}
         {NavButton("Projects", "#projects", "right")}
         {NavButton("Experience", "#experience", "right")}
@@ -19,7 +19,7 @@ export default function Header() {
 function NavButton(title: string, href: string, side: "left" | "right") {
   return (
     <li>
-      <a className={`float-${side} block text-white text-center p-4 w-fit no-underline hover:bg-neutral-900`} href={href}>
+      <a className={`float-${side} block text-center p-4 w-fit no-underline hover:bg-blue-700`} href={href}>
         {title}
       </a>
     </li>

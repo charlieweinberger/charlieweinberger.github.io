@@ -7,7 +7,7 @@ import Projects from '../components/sections/projects';
 
 export default function App() {
   return (
-    <div className="bg-black text-white text-center m-0">
+    <div className="text-neutral-50 text-center m-0">
       
       <Header /> {/* Blue, wavy, layered */}
       

@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div id="about" className="flex justify-center items-center h-screen gap-[84px] blackBorder bg-pink-400">
+    <div id="about" className="flex justify-center items-center h-screen gap-[84px] bg-neutral-950">
         
         {/* Name, Role Location, University, Links */}
-        <div className="flex items-start flex-col px-10 py-4 w-4/12 text-2xl blackBorder">
-          <div className="text-8xl leading-[1.1] my-8 text-left blackBorder">Charlie Weinberger</div>
+        <div className="flex items-start flex-col px-10 py-4 w-4/12 text-2xl">
+          <div className="text-8xl leading-[1.1] my-8 text-left">Charlie Weinberger</div>
           {middleInformation()}
           {links()}
         </div>
@@ -26,7 +26,7 @@ export default function About() {
 
 function middleInformation() {
   return (
-    <div className="grid grid-cols-[30px_minmax(110px,_1fr)] justify-start text-left gap-4 p-4 blackBorder">
+    <div className="grid grid-cols-[30px_minmax(110px,_1fr)] justify-start text-left gap-4 py-4">
       {middleInfoLine(faLaptop, "Fullstack Web Developer")}
       {middleInfoLine(faLocationDot, "Pasadena, California / Irvine, California")}
       {middleInfoLine(faSchool, "University of California, Irvine")}
@@ -51,19 +51,22 @@ function middleInfoLine(icon: IconDefinition, text: string) {
 
 function links() {
   return (
-    <div className="flex justify-center items-center my-10 pr-4 gap-4 w-full">
-      {professionalLink("Resume")}
-      {professionalLink("LinkedIn")}
-      {professionalLink("GitHub")}
+    <div className="flex justify-center items-center my-10 pr-6 gap-6 w-full">
+      {profileLink("Resume", "/Charlie_Weinberger_Resume.pdf")}
+      {profileLink("LinkedIn", "https://linkedin.com/in/charlie-weinberger/")}
+      {profileLink("GitHub", "https://github.com/charlieweinberger/")}
     </div>
   );
 }
 
-function professionalLink(text: string) {
+function profileLink(text: string, link: string) {
   return (
-    <button className="p-4 w-full border"> {/* replace with shadcn/ui buttons? */}
+    <a
+      className="p-4 w-full border rounded-xl hover:bg-neutral-50 hover:text-neutral-950 active:bg-gray-300 active:text-neutral-950"
+      href={link} target="_blank"
+    >
       {text}
-    </button>
+    </a>
   );
 }
 
