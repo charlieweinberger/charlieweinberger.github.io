@@ -10,7 +10,7 @@ export default function Header() {
           <a href="#about">Charlie Weinberger</a>
         </li>
 
-        {/* The items below are in reverse-order */}
+        {/* The items below are in reverse order */}
         
         <li className="float-right block text-white text-center p-4 no-underline hover:bg-neutral-900">
           <a href="#projects">Projects</a>
