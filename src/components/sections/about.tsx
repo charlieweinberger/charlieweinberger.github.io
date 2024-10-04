@@ -1,44 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptop, faLocationDot, faSchool } from '@fortawesome/free-solid-svg-icons';
+import { faLaptop, faLocationDot, faSchool, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 export default function About() {
   return (
     <div id="about" className="flex flex-col justify-center items-center h-screen bg-pink-400">
-
-      {/* Include name, location, school, image, and links (github, linkedin, resume). Maybe also one/two sentences about who I am as a programmer? Make sure this sections looks good! */}
-
       <div className="flex w-2/3 h-2/3 blackBorder">
         
-        {/* About Text */}
-        <div className="flex items-start flex-col gap-4 w-1/2 text-2xl blackBorder">
-          
-          {/* Name */}
-          <div className="text-8xl text-left blackBorder">Charlie Weinberger</div>
+        {/* Include name, location, school, image, and links (github, linkedin, resume). Maybe also one/two sentences about who I am as a programmer? Make sure this sections looks good! */}
 
-          {/* Role, Location, and University */}
-          <ul className="text-left blackBorder">
-          <li className="flex items-center blackBorder">
-              <FontAwesomeIcon icon={faLaptop} className="h-6" />
-              <div>Fullstack Web Developer</div>
-            </li>
-            <li className="flex items-center blackBorder">
-              <FontAwesomeIcon icon={faLocationDot} className="h-6" />
-              <div>Pasadena, California / Irvine, California</div>
-            </li>
-            <li className="flex items-center blackBorder">
-              <FontAwesomeIcon icon={faSchool} className="h-6" />
-              <div>University of California, Irvine</div>
-            </li>
-          </ul>
-
-          {/* Links */}
-          <div className="flex justify-center items-center blackBorder"> {/* replace with shadcn/ui buttons? */}
-            <button className="blackBorder p-4">Resume</button> 
-            <button className="blackBorder p-4">LinkedIn</button>
-            <button className="blackBorder p-4">GitHub</button>
-          </div>
-
+        {/* Name, Role Location, University, Links */}
+        <div className="flex items-start flex-col gap-4 px-10 py-4 w-1/2 text-2xl blackBorder">
+          <div className="text-8xl my-10 text-left blackBorder">Charlie Weinberger</div>
+          {middleInformation()}
+          {links()}
         </div>
 
         {/* Picture */}
@@ -60,7 +35,47 @@ export default function About() {
         </div>
 
       </div>
-
     </div>
+  );
+}
+
+// MiddleInformation
+
+function middleInformation() {
+  return (
+    <ul className="flex flex-col gap-4 text-left blackBorder">
+      {middleInfoLine(faLaptop, "Fullstack Web Developer")}
+      {middleInfoLine(faLocationDot, "Pasadena, California / Irvine, California")}
+      {middleInfoLine(faSchool, "University of California, Irvine")}
+    </ul>
+  );
+}
+
+function middleInfoLine(icon: IconDefinition, text: string) {
+  return (
+    <li className="flex items-center gap-4 blackBorder">
+      <FontAwesomeIcon icon={icon} className="h-6" />
+      <div>{text}</div>
+    </li>
+  );
+}
+
+// Links
+
+function links() {
+  return (
+    <div className="flex justify-center items-center my-10 pr-4 gap-4 w-full blackBorder"> {/* replace with shadcn/ui buttons? */}
+      {professionalLink("Resume")}
+      {professionalLink("LinkedIn")}
+      {professionalLink("GitHub")}
+    </div>
+  );
+}
+
+function professionalLink(text: string) {
+  return (
+    <button className="blackBorder p-4 w-full">
+      {text}
+    </button>
   );
 }
