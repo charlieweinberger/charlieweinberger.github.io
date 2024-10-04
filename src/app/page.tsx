@@ -9,13 +9,22 @@ export default function App() {
   return (
     <div className="text-neutral-50 text-center m-0">
       
-      <Header /> {/* Blue, wavy, layered */}
+      {/*
       
-      <About /> {/* similar to header, but a different color (either entirely (ex: green) or transition (ex: blue to green)) and a different design (not wavy and layered, but maybe spiky? slanted?) */}
-      <Experience /> {/* same as about, but with another different color & shape */}
-      <Projects /> {/* same as about, but with another different color & shape */}
+      Header: Blue, wavy, layered, sticky
+      Footer: Blue, wavy, layered
       
-      <Footer /> {/* Blue, wavy, layered */}
+      About: Similar to header, but a different color (either entirely (ex: green) or transition (ex: blue to green)) and a different design (not wavy and layered, but maybe spiky? slanted?)
+      Experience: Same as about, but with another different color & shape
+      Projects: Same as about, but with another different color & shape
+
+      */}
+
+      <Header />
+      <About />
+      {/* <Experience />
+      <Projects />
+      <Footer /> */}
    
     </div>
   );

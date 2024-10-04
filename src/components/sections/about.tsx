@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div id="about" className="flex justify-center items-center h-screen gap-[84px] bg-neutral-950">
+    <div id="about" className="flex justify-center items-center h-screen gap-[128px] bg-neutral-950">
         
         {/* Name, Role Location, University, Links */}
-        <div className="flex items-start flex-col px-10 py-4 w-4/12 text-2xl">
-          <div className="text-8xl leading-[1.1] my-8 text-left">Charlie Weinberger</div>
+        <div className="flex items-start flex-col py-4 w-[32.15%] text-2xl">
+          <div className="my-8 text-8xl text-left font-bold leading-[1.1]">Charlie Weinberger</div>
           {middleInformation()}
           {links()}
         </div>
@@ -51,7 +51,7 @@ function middleInfoLine(icon: IconDefinition, text: string) {
 
 function links() {
   return (
-    <div className="flex justify-center items-center my-10 pr-6 gap-6 w-full">
+    <div className="flex justify-center items-center my-10 pr-1 gap-6 w-full">
       {profileLink("Resume", "/Charlie_Weinberger_Resume.pdf")}
       {profileLink("LinkedIn", "https://linkedin.com/in/charlie-weinberger/")}
       {profileLink("GitHub", "https://github.com/charlieweinberger/")}
@@ -63,7 +63,8 @@ function profileLink(text: string, link: string) {
   return (
     <a
       className="p-4 w-full border rounded-xl hover:bg-neutral-50 hover:text-neutral-950 active:bg-gray-300 active:text-neutral-950"
-      href={link} target="_blank"
+      href={link}
+      target="_blank"
     >
       {text}
     </a>
