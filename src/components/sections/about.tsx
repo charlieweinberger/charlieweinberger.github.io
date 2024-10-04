@@ -7,17 +7,14 @@ export default function About() {
     <div id="about" className="flex flex-col justify-center items-center h-screen bg-pink-400">
       <div className="flex w-2/3 h-2/3 blackBorder">
         
-        {/* Include name, location, school, image, and links (github, linkedin, resume). Maybe also one/two sentences about who I am as a programmer? Make sure this sections looks good! */}
-
         {/* Name, Role Location, University, Links */}
-        <div className="flex items-start flex-col gap-4 px-10 py-4 w-1/2 text-2xl blackBorder">
-          <div className="text-8xl my-10 text-left blackBorder">Charlie Weinberger</div>
+        <div className="flex items-start flex-col px-10 py-4 w-1/2 text-2xl blackBorder">
+          <div className="text-8xl leading-[1.1] my-8 text-left blackBorder">Charlie Weinberger</div>
           {middleInformation()}
           {links()}
         </div>
 
-        {/* Picture */}
-        {/* Note: Image must be square */}
+        {/* Picture (must be square) */}
         <div className="flex justify-center items-center w-1/2">
           <Image 
             src="/christian.png"
@@ -43,20 +40,49 @@ export default function About() {
 
 function middleInformation() {
   return (
-    <ul className="flex flex-col gap-4 text-left blackBorder">
+
+    <div className="grid grid-cols-[30px_minmax(110px,_1fr)] justify-start text-left gap-4 p-4 blackBorder">
+
       {middleInfoLine(faLaptop, "Fullstack Web Developer")}
       {middleInfoLine(faLocationDot, "Pasadena, California / Irvine, California")}
       {middleInfoLine(faSchool, "University of California, Irvine")}
-    </ul>
+
+      {/* <div className="flex justify-center items-center">
+        <FontAwesomeIcon icon={faLaptop} className="h-5" />
+      </div>
+      <div className="text-2xl">
+        Fullstack Web Developer
+      </div>
+
+      <div className="flex justify-center items-center">
+        <FontAwesomeIcon icon={faLocationDot} className="h-5" />
+      </div>
+      <div className="text-2xl">
+        Pasadena, California / Irvine, California
+      </div>
+
+      <div className="flex justify-center items-center">
+        <FontAwesomeIcon icon={faSchool} className="h-5" />
+      </div>
+      <div className="text-2xl">
+        University of California, Irvine
+      </div> */}
+
+    </div>
+
   );
 }
 
 function middleInfoLine(icon: IconDefinition, text: string) {
   return (
-    <li className="flex items-center gap-4 blackBorder">
-      <FontAwesomeIcon icon={icon} className="h-6" />
-      <div>{text}</div>
-    </li>
+    <>
+      <div className="flex justify-center items-center">
+        <FontAwesomeIcon icon={icon} className="h-5" />
+      </div>
+      <div className="text-2xl">
+        {text}
+      </div>
+    </>
   );
 }
 
