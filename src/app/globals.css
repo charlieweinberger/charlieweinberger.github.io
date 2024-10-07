@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.AboutSectionName {
+  font-size: max(4.9vw, 80px);
+}
