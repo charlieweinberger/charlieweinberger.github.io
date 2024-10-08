@@ -28,12 +28,12 @@ TODO: implement the ideas below. Lines 22-25 have not been addressed yet.
 
 export default function About() {
   return (
-    <div id="about" className="h-screen flex flex-wrap justify-center items-center p-16 gap-[10%] bg-neutral-950">
+    <div id="about" className="h-screen flex flex-wrap justify-center items-center px-[5%] gap-[10%] bg-neutral-950">
         
         {/* Name, Role, Location, University, Links */}
-        <div className="flex items-start flex-col w-[32.15%] min-w-[410px] text-2xl gap-12">
+        <div className="flex items-start flex-col w-[480px] text-2xl gap-12">
 
-          <div className="AboutSectionNameFontSize text-left font-bold leading-[1.1]">
+          <div className="text-[85px] text-left font-bold leading-[1.1]">
             Charlie Weinberger
           </div>
 
@@ -43,7 +43,7 @@ export default function About() {
             {middleInfoLine(faSchool, "University of California, Irvine")}
           </div>
 
-          <div className="flex justify-center items-center mt-2 gap-6 w-full">
+          <div className="flex justify-center items-center mt-2 gap-6 w-[480px]">
             {profileLink("Resume", "/Charlie_Weinberger_Resume.pdf")}
             {profileLink("LinkedIn", "https://linkedin.com/in/charlie-weinberger/")}
             {profileLink("GitHub", "https://github.com/charlieweinberger/")}
@@ -52,7 +52,7 @@ export default function About() {
         </div>
 
         {/* Picture */}
-        <div className="flex justify-center items-center AboutSectionImageWidth">
+        <div className="flex justify-center items-center w-[480px]">
           <Image 
             src="/bonfire.png"
             width={768}
