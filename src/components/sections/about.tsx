@@ -31,10 +31,11 @@ export default function About() {
     <div id="about" className="h-screen flex flex-wrap justify-center items-center p-16 gap-[10%] bg-neutral-950">
         
         {/* Name, Role, Location, University, Links */}
-        <div className="flex items-start flex-col w-[32.15%] min-w-[410px] text-2xl gap-12">
+        <div className="flex items-start flex-col w-full lg:w-[32.15%] lg:min-w-[410px] text-2xl gap-12">
 
-          <div className="AboutSectionNameFontSize text-left font-bold leading-[1.1]">
-            Charlie Weinberger
+          <div className="text-left font-bold leading-[1.1]">
+            <div>Charlie</div>
+            <div>Weinberger</div>
           </div>
 
           <div className="grid grid-cols-[30px_minmax(110px,_1fr)] justify-start text-left gap-4">
