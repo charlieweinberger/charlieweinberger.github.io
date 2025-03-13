@@ -3,30 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Laptop, MapPin, GraduationCap } from "lucide-react";
 
-/*
-
-TODO: implement the ideas below. Lines 22-25 have not been addressed yet.
-
-- If the window is wide enough, the text container should be to the left of the image. If not, the text container should be above the image.
-- If side-by-side:
-  - Text container
-    - My name should be the same width as the buttons
-    - There should be a minimum width, for the buttons
-    - The size of the name should grow as the width of the text container grows
-  - Image
-    - The image should be the same height as the text container
-    - The image should always be a circle
-  - Spacing
-    - There should be a minimum padding on the left and right of the screen, which shows when the window is not very wide
-    - There should also be a minimum gap between the text container and the image
-    - The space to the left, to the right, and in between the text container and image should all shrink at the same rate when the window changes size
-- If one above the other:
-  - My name should be aligned centrally, not left-aligned
-  - The image should be the same width as the text container
-  - Vertical spacing must look nice
-
-*/
-
 function InfoRow({ icon: Icon, text }: { icon: React.ElementType, text: string; }) {
   return (
     <div className="flex flex-row gap-4">
