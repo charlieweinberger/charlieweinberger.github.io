@@ -1,5 +1,5 @@
 import SVGWave from '@/components/SVGWave';
-import About from '@/components/sections/About';
+import About from '@/components/sections/About.tsx';
 
 export default function App() {
   return (

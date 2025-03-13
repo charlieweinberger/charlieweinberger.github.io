@@ -1,4 +1,4 @@
-import SVGWave from '../components/SVGWave';
+import SVGWave from '@/components/SVGWave';
 
 function NavButton(title: string, href: string, side: "left" | "right") {
   return (
