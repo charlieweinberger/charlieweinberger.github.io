@@ -1,4 +1,4 @@
-export default function SVG({ position }: any) {
+export default function SVGWave({ position }: { position: "top" | "bottom" }) {
   
   const CSS = (position == "top") ? "top-0" : "bottom-0 rotate-180";
   

@@ -1,6 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptop, faLocationDot, faSchool, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { Laptop, MapPin, GraduationCap } from "lucide-react";
 
 /*
 
@@ -26,70 +27,58 @@ TODO: implement the ideas below. Lines 22-25 have not been addressed yet.
 
 */
 
-export default function About() {
+function InfoRow({ icon: Icon, text }: { icon: React.ElementType, text: string; }) {
   return (
-    <div id="about" className="h-screen flex flex-wrap justify-center items-center p-16 gap-[10%] bg-neutral-950">
-        
-        {/* Name, Role, Location, University, Links */}
-        <div className="flex items-start flex-col w-[32.15%] min-w-[410px] text-2xl gap-12">
-
-          <div className="AboutSectionNameFontSize text-left font-bold leading-[1.1]">
-            Charlie Weinberger
-          </div>
-
-          <div className="grid grid-cols-[30px_minmax(110px,_1fr)] justify-start text-left gap-4">
-            {middleInfoLine(faLaptop, "Fullstack Web Developer")}
-            {middleInfoLine(faLocationDot, "Pasadena, California / Irvine, California")}
-            {middleInfoLine(faSchool, "University of California, Irvine")}
-          </div>
-
-          <div className="flex justify-center items-center mt-2 gap-6 w-full">
-            {profileLink("Resume", "/Charlie_Weinberger_Resume.pdf")}
-            {profileLink("LinkedIn", "https://linkedin.com/in/charlie-weinberger/")}
-            {profileLink("GitHub", "https://github.com/charlieweinberger/")}
-          </div>
-
-        </div>
-
-        {/* Picture */}
-        <div className="flex justify-center items-center AboutSectionImageWidth">
-          <Image 
-            src="/bonfire.png"
-            width={768}
-            height={768}
-            alt="Picture of Charlie Weinberger"
-            style={{
-              borderRadius: "50%",
-              objectFit: "cover",
-            }}
-          />
-        </div>
-
+    <div className="flex flex-row gap-4">
+      <div className="flex justify-center items-center">
+        <Icon />
+      </div>
+      <p className="text-lg sm:text-2xl">
+        {text}
+      </p>
     </div>
   );
 }
 
-function middleInfoLine(icon: IconDefinition, text: string) {
+function ProfileLink({ text, link }: { text: string, link: string }) {
   return (
-    <>
-      <div className="flex justify-center items-center">
-        <FontAwesomeIcon icon={icon} className="h-5" />
-      </div>
-      <p>
+    <Button
+      asChild
+      variant="outline"
+      className="sm:h-20 w-full rounded-xl sm:text-2xl bg-black"
+    >
+      <Link href={link} target="_blank">
         {text}
-      </p>
-    </>
+      </Link>
+    </Button>
   );
 }
 
-function profileLink(text: string, link: string) {
+export default function About() {
   return (
-    <a
-      className="p-4 w-full border rounded-xl hover:bg-neutral-50 hover:text-neutral-950 active:bg-gray-300 active:text-neutral-950"
-      href={link}
-      target="_blank"
-    >
-      {text}
-    </a>
+    <div id="About" className="h-screen flex flex-wrap justify-center items-center p-16 gap-[10%] bg-neutral-950">
+        
+        {/* Name, Role, Location, University, Links */}
+        <div className="flex flex-col gap-12 justify-center items-center">
+
+          <div className="text-5xl sm:text-7xl text-center font-bold">
+            Charlie Weinberger
+          </div>
+
+          <div className="flex flex-col gap-4 sm:gap-6 text-left">
+            <InfoRow icon={Laptop} text="Fullstack Web Developer" />
+            <InfoRow icon={MapPin} text="Pasadena, California / Irvine, California" />
+            <InfoRow icon={GraduationCap} text="University of California, Irvine" />
+          </div>
+
+          <div className="w-full flex justify-center items-center gap-6">
+            <ProfileLink text="Resume" link="/Charlie_Weinberger_Resume.pdf" />
+            <ProfileLink text="LinkedIn" link="https://linkedin.com/in/charlie-weinberger/" />
+            <ProfileLink text="GitHub" link="https://github.com/charlieweinberger/" />
+          </div>
+
+        </div>
+
+    </div>
   );
 }
