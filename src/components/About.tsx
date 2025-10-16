@@ -47,8 +47,8 @@ export default function About() {
             <InfoRow icon={GraduationCap} text="University of California, Irvine" />
           </div>
 
-          <div className="w-96 flex justify-center items-center gap-6">
-            {/* <ProfileLink text="Resume" link="/Charlie_Weinberger_Resume.pdf" /> */}
+          <div className="w-full flex justify-center items-center gap-6">
+            <ProfileLink text="Resume" link="/Charlie_Weinberger_Resume.pdf" />
             <ProfileLink text="LinkedIn" link="https://linkedin.com/in/charlie-weinberger/" />
             <ProfileLink text="GitHub" link="https://github.com/charlieweinberger/" />
           </div>
